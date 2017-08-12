@@ -6,7 +6,6 @@ categories: wireless
 tags: wireless IEEE802.11 Netlink nl80211.h
 excerpt: "A sample program to get survey details of a WiFi interface using Netlink Library nl80211.h "
 modified: 2016-11-03
-author: Kiran Mathews
 comments: true
 share: true
 ---

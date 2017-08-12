@@ -5,7 +5,6 @@ meta: Install a missing latex package in linux, fedora
 categories: FAQs
 tags: Latex fedora
 modified: 2016-08-25
-author: Kiran Mathews
 excerpt: "Install a missing latex package in linux"
 finished: true
 comments: true

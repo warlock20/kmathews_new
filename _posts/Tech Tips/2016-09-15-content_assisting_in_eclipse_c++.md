@@ -5,7 +5,6 @@ meta: ctrl + space in eclipse, c++, java
 categories: FAQs
 tags: eclipse
 modified: 2016-08-25
-author: Kiran Mathews
 excerpt: Eclipse tips
 finished: true
 comments: true

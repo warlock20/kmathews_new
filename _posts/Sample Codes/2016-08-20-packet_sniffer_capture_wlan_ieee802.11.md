@@ -7,7 +7,6 @@ tags: wireless IEEE802.11
 excerpt: "Packet sniffer for IEEE 802.11 (WLAN) with CRC check"
 date: 2016-08-14
 modified: 2016-08-20
-author: Kiran Mathews
 comments: true
 share: true
 ---
