@@ -1,13 +1,31 @@
 ---
 layout: page
-title: 
+title:
 excerpt: "So Simple is a responsive Jekyll theme for your words and images."
 modified: 2014-08-08T19:44:38.564948-04:00
 image:
-  feature: so-simple-sample-image-4.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature:
+  credit:
+  creditlink:
 ---
+
+
+{% if page.image.feature %}<header class="masthead">
+	{% if site.logo != null %}
+		<div class="wrap">
+			<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
+		</div>
+	{% endif %}
+</header><!-- /.masthead -->
+{% else %}<header class="masthead">
+	<div class="wrap">
+      {% if site.logo != null %}
+  		<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
+      {% endif %}
+      <h1 class="site-title animated fadeIn"><a href="{{ site.url }}/">{{ site.title }}</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
+	</div>
+</header><!-- /.masthead -->{% endif %}
 <!--
 Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the follow up to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes) --- by designer slash illustrator [Michael Rose](http://mademistakes.com).
 
