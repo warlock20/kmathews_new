@@ -1,39 +1,6 @@
 <html>
-  {% include headHome.html %}
-  <body>
-    <!--<div class="cover">
-      <div class="clock"></div>
-      <div class='hours'></div>
-      <div class='seconds'></div>
-      <div class='minutes'></div>
-      <div class="site-name">
-        <div class="site-name__inner">
-          <div class="name">{{ site.title }}</div>
-          <div class="desc">{{site.description}}</div>
-          <a style="color:white" href="{{ site.url }}/blog" class="btn" > Blog</a>
-          <a style="color:white" href="{{ site.url }}/about" class="btn" > About</a>
-        </div>
-      </div>
-    </div> -->
-
-
-  <!--  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-
-      <header class="masthead mb-auto">
-      </header>
-
-      <main role="main" class="inner cover">
-        <h1 class="align-items-center cover-heading">{{ site.title }}</h1>
-          <p class="lead">{{site.description}}</p>
-          <a href="{{ site.url }}/blog" class="btn btn-primary" > Blog</a>
-          <a href="{{ site.url }}/about" class="btn btn-primary" > About</a>
-      </main>
-
-      <footer class="mastfoot mt-auto">
-            </footer>
-          </div>
-    </div> -->
-
+{% include headHome.html %}
+<body>
   <select id="themeSelector" onchange="if (!window.__cfRLUnblockHandlers) return false; toggleTheme()" aria-label="Select theme">
     <option value="default" selected="selected">Default</option><option value="dark">Dark</option></select>
     <div class="mid-section-home">
@@ -63,11 +30,18 @@
         </div>
       </div>
     </div>
-    <script defer="defer" src="../assets/js/homePagesJs/beacon.js" data-cf-beacon="{&quot;rayId&quot;:&quot;683d184ed8184e38&quot;,&quot;version&quot;:&quot;2021.8.1&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;14bf247120744930a7e0269aedddee46&quot;,&quot;si&quot;:10}"></script>
+    <script defer="defer" src="{{ site.url }}//assets/js/homePagesJs/beacon.js" data-cf-beacon="{&quot;rayId&quot;:&quot;683d184ed8184e38&quot;,&quot;version&quot;:&quot;2021.8.1&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;14bf247120744930a7e0269aedddee46&quot;,&quot;si&quot;:10}"></script>
+    <div class="footer-wrapper">
+      <footer role="contentinfo" class="entry-wrapper">
+        {% include footer.html %}
+      </footer>
+    </div><!-- /.footer-wrapper -->
 
   </body>
-</html>
-    
+
+
+  </html>
+  
 
 
 
