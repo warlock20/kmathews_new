@@ -133,32 +133,3 @@ body {
   color: var(--primary-text-color);
   border-radius: 5px;
   border: 0; }
-
-.post-categories {
-  text-align: right; }
-
-.blog-list {
-  list-style: none;
-  padding-left: 0; }
-  .blog-list li {
-    margin-bottom: 50px; }
-    .blog-list li .excerpt {
-      font-size: 15px; }
-    .blog-list li .blog-heading {
-      font-size: 25px;
-      font-weight: 800; }
-    .blog-list li .date {
-      font-size: 15px;
-      opacity: 0.8;
-      margin-left: 20px; }
-
-.blogPage-categoryList ul {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0; }
-  .blogPage-categoryList ul li {
-    margin: 10px 10px; }
-  .blogPage-categoryList ul li:first-child {
-    margin-left: 0; }
-

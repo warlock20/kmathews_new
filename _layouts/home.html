@@ -1,28 +1,25 @@
 <html>
 {% include headHome.html %}
 <body>
-  <select id="themeSelector" onchange="if (!window.__cfRLUnblockHandlers) return false; toggleTheme()" aria-label="Select theme">
-    <option value="default" selected="selected">Default</option><option value="dark">Dark</option></select>
+<!--  <select id="themeSelector" onchange="if (!window.__cfRLUnblockHandlers) return false; toggleTheme()" aria-label="Select theme">
+    <option value="default" selected="selected">Default</option><option value="dark">Dark</option></select>-->
     <div class="mid-section-home">
       <h1><span>I am </span>{{ site.title }}</h1>
       <div class="row sub-heading">
+
         <div class="summary-about-me">
           <p>{{site.description}}</p>
         </div>
+
         <div class="nav-link">
           <ul>
             <li>
-              <a href="{{site.url}}">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="{{ site.url }}/about">
+              <a href="{{ site.url }}/about" class = "btn">
                 About
               </a>
             </li>
             <li>
-              <a href="{{ site.url }}/blog"">
+              <a href="{{ site.url }}/blog" class = "btn">
                 Blog
               </a>
             </li>
@@ -36,7 +33,3 @@
 
 
   </html>
-
-
-
-
