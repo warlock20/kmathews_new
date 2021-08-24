@@ -4,7 +4,7 @@
 
   <body>
 
-
+<!--
     <div class="cover">
       <div class="clock"></div>
       <div class='hours'></div>
@@ -18,48 +18,43 @@
           <a style="color:white" href="{{ site.url }}/about" class="btn" > About</a>
         </div>
       </div>
+    </div>-->
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="container">
+
+          <div class="masthead clearfix">
+            <div class="container inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Cover your page.</h1>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-
-<script>
-  setInterval(function() {
-    var seconds = new Date().getSeconds();
-    var sdegree = seconds * 6 + 270;
-    seconds = ("0" + seconds).slice(-2);
-    var secondSel = document.querySelector(".seconds");
-
-    secondSel.style.transform = "rotate(" + sdegree + "deg) translate(160px) rotate(-" + sdegree + "deg)";
-    secondSel.innerHTML = seconds;
-
-    var minutes = new Date().getMinutes();
-    var mdegree = minutes * 6 + 270;
-    var minutesSel = document.querySelector(".minutes");
-    minutes = ("0" + minutes).slice(-2);
-
-    minutesSel.style.transform = "rotate(" + mdegree + "deg) translate(181px) rotate(-" + mdegree + "deg)";
-    minutesSel.innerHTML =  minutes;
-
-    var hours = new Date().getHours();
-    var hoursSel = document.querySelector(".hours");
-
-    if (hours > 12) {
-      hours = hours - 12;
-    }
-
-    hours = ("0" + hours).slice(-2);
-
-    hoursSel.innerHTML = hours;
-  }, 1000);
-
-/*  var btnSel = document.querySelector('.btn');
-  var header = document.getElementsByTagName('header')[0];
-
-  btnSel.addEventListener("click", function() {
-    header.scrollIntoView();
-  }, false);*/
-
-</script>
-
+</html>
+    
   </body>
 
-</html>
+
+
