@@ -1,89 +1,123 @@
 ---
-layout: page
+layout: page-about
 title:
 excerpt: "So Simple is a responsive Jekyll theme for your words and images."
 modified: 2014-08-08T19:44:38.564948-04:00
 image:
-  feature:
-  credit:
-  creditlink:
+feature:
+credit:
+creditlink:
 ---
 
 
 {% if page.image.feature %}<header class="masthead">
 	{% if site.logo != null %}
-		<div class="wrap">
-			<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
-		</div>
-	{% endif %}
+  <div class="wrap">
+   <a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
+ </div>
+ {% endif %}
 </header><!-- /.masthead -->
 {% else %}<header class="masthead">
 	<div class="wrap">
-      {% if site.logo != null %}
-  		<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
-      {% endif %}
-      <h1 class="site-title animated fadeIn"><a href="{{ site.url }}/">{{ site.title }}</a></h1>
-		<h2 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
-	</div>
+    {% if site.logo != null %}
+    <a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
+    {% endif %}
+    <h1 class="site-title animated fadeIn"><a href="{{ site.url }}/">{{ site.title }}</a></h1>
+    <h2 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
+  </div>
 </header><!-- /.masthead -->{% endif %}
-<!--
-Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the follow up to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes) --- by designer slash illustrator [Michael Rose](http://mademistakes.com).
 
-## So Simple Theme is all about:
-
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.
-* Minimal embellishments and subtle animations.
-* Optional large feature images for posts and pages.
-* [Custom 404 page]({{ site.url }}/404.html) to get you started.
-* [Simple site search](https://github.com/christian-fei/Simple-Jekyll-Search)
-* Support for Disqus Comments
-
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install So Simple Theme</a>
-
-[^1]: Example: *domain.com/category-name/post-title*
--->
 ## About Me:
 
-I am Kiran Mathews, a hardcore Gooner and PhD student supervised by Prof Reinhard Gotzhein at Technische Universität Kaiserslautern, Germany. I am completed my masters in Computer Science from the [Technical University of Kaiserslautern](https://www.uni-kl.de/), Germany. My research areas are in Distributed protocols, Wireless communications, Ad-hoc networks and Network Security. I am also working as Research Assistant in [Networked Systems](http://vs.cs.uni-kl.de/) in TU KL.
+I am Kiran Mathews, a hardcore Gooner and PhD student supervised by Prof Reinhard Gotzhein at Technische Universität Kaiserslautern, Germany. I have completed my masters in Computer Science from the [Technical University of Kaiserslautern](https://www.uni-kl.de/), Germany. My research areas are in Distributed protocols, Wireless communications, Ad-hoc networks and Network Security. I am also working as Research Assistant in [Networked Systems](http://vs.cs.uni-kl.de/) in TU KL.
 
-## Research:
+<!--
 
-### Academic Research:
+  <ul class="nav nav-tabs">
+      {% for section in site.data.sections %}
+        {% if section.first %}
+          <li >
+            <a data-toggle="tab" id="{{ section.jsid }}" href="#{{section.id}}" role="tab" aria-controls="{{section.id}}" aria-selected="true" style="font-family:{{ theme.font}};color:{{ theme.home-highlight-header-text}};">{{section.emoji}} {{section.name}}</a>
+          </li>
+        {% else %}
+          <li >
+              <a data-toggle="tab"  id="{{ section.jsid }}" href="#{{section.id}}" role="tab" aria-controls="{{section.id}}" aria-selected="true" style="font-family:{{ theme.font}};color:{{ theme.home-highlight-header-text}};">{{section.emoji}} {{section.name}}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  <div class="card-body">          
+      <div class="tab-content mt-3">
+        {% for section in site.data.sections %}
+          {% if section.first %}
+            {% if section.name == "Publications" %}
+              <div class="tab-pane active overflow-auto" id="{{section.id}}" role="tabpanel">
+                <p><i>{{section.description}}</i></p>
+              </div>
+            {% else %}
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
+                <p class="card-text">{{section.description}}</p>
+              </div>
+            {% endif %}
+          {% else %}  
+            {% if section.name == "Presentations" %}
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+                <p><i>{{section.description}}</i></p>
+              </div>
+            {% elsif section.name == "Projects" %}
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+                <p><i>{{section.description}}</i></p>
+                  {% for projects in site.data.projects %}
+                  <div class="media mt-2">
+                    <a href="{{ projects.link }}"><img src="{{ projects.image }}" class="mr-3 mb-2 img-thumbnail border-0" alt="..."></a>
+                    <div class="media-body">
+                      <h5 class="mt-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h5>
+                      {{ projects.description }}
+                      {% if projects.tech %}
+                        <h6><mark><u>Technologies</u></mark></h6>
+                        {% for tech in projects.tech %}
+                        <span class="badge badge-secondary mr-1" style="background-color:{{ theme.projects-color }};">{{ tech }}</span>
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>        
+            {% elsif section.name == "Teaching" %}
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+                <p><i>{{section.description}}</i></p>
+                    {% for courses in site.data.teaching %}
+                    <div class="list-group">
+                      <div class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">{{ courses.Schoool }}</h5>
+                          <p>{{ courses.Program }}</p>
+                          <small>{{ courses.StartDate }} - {{ courses.EndDate }}</small>
+                        </div>
+                        <p class="mb-1">{{ courses.description }}</p>
+                        <small>{{ courses.Department }}</small>
+                      </div>
+                    </div>
+                    {% endfor %}
+              </div>
+            {% elsif section.name == "Coursework" %}
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+                <p><i>{{section.description}}</i></p>
+                <div class="list-group">
+                {% for courses in site.data.courses %}
+                  <button type="button" class="list-group-item text-left">{{ courses.Course }}</button>
+                {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+                <h5 class="card-title text-center"><a href="/{{ section.url }}" class="highlighted">{{section.description}}</a></h5>
+                <p class="card-text">{{ section.content }} </p>              
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+  </div>
 
-* **Analysis of time synchronization of OpenSky sensor nodes**
-
-  <i>Abstract</i> : The goal of this project is to synchronize the Open-
-							Sky sesnor network with nanosecond precision. For this, we checked the messages sent
-							by the aircraft to two receivers and checked the offset
-							in their reception time. To check the correctness of
-							our system we compare the calculated measurements
-							to the ground truth value, ie; the difference in the
-							timestamps between two receivers should be equal
-							to the difference in the message propagation delay
-							between the two receivers to the aircraft.
-
-    		[ *[Report]({{ site.url }}/assets/docs/reports/Time Sync in OpenSky/report.pdf)* ] [ *[Presentation]({{ site.url }}/assets/docs/presentations/Time Sync in OpenSky/main.pdf)* ]
-
-
-
-* **Automatic Topology Discovery in WiFi(IEEE 802.11) network**
-
-	<i>Abstract</i> : The main goal of this guided research was to come up with a protocol
-		      to detect the topology of the network with nodes
-		      connected via IEEE 802.11. We came up with a protocol, which terminates with consistent topology information among nodes.
-		      One of the main tasks was the termination of the distributed protocol,
-		      which was solved by introducing a master node to compare the hash values of the topology matrix of each node.
-		      As a part of guided research, the protocol was implemented and tested.
-
-    [ *[Report](https://vs.cs.uni-kl.de/en/publications/2016/Ma16/)* ]
-    		<!--[<a href="assets/docs/presentations/Mesh Networks Based on IEEE 802.11/presentation.pdf">Report</a>]-->
-
-
-### Academic seminar:        
-
-* **Mesh Networks Based on IEEE 802.11**
-
-	<i>Abstract</i> :A study about mesh networks based on IEEE 802.11. In this work, we discuss mesh formation, routing techniques, frame structure, internetworking etc. We also studied about mesh projects such as One Laptop Per Child (OLPC) and Seamless Mesh (SMesh).
-
-    		[ *[Report]({{ site.url }}/assets/docs/reports/Mesh Networks Based on IEEE 802.11/main.pdf)* ] [ *[Presentation]({{ site.url }}/assets/docs/presentations/Mesh Networks Based on IEEE 802.11/presentation.pdf)* ]
+  -->
