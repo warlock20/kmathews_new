@@ -30,9 +30,143 @@ creditlink:
 ## About Me:
 
 I am Kiran Mathews, a hardcore Gooner and PhD student supervised by Prof Reinhard Gotzhein at Technische Universität Kaiserslautern, Germany. I have completed my masters in Computer Science from the [Technical University of Kaiserslautern](https://www.uni-kl.de/), Germany. My research areas are in Distributed protocols, Wireless communications, Ad-hoc networks and Network Security. I am also working as Research Assistant in [Networked Systems](http://vs.cs.uni-kl.de/) in TU KL.
+ <br> <br> <br>
+
+<!--https://www.w3schools.com/bootstrap4/bootstrap_navs.asp
+    https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_nav_pills_toggleable&stacked=h-->
+<div class="container shadow-lg p-3 mb-5 bg-white rounded" id="box-shadow">
+  <br>
+  <!-- Nav pills -->
+  <ul class="nav nav-pills nav-fill" role="tablist">
+    {% for section in site.data.sections %}
+    {% if section.first %}
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" id="{{ section.jsid }}" href="#{{section.id}}" >{{section.emoji}} {{section.name}}</a>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" id="{{ section.jsid }}" href="#{{section.id}}">{{section.emoji}} {{section.name}}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    {% for section in site.data.sections %}
+      {% if section.first %}
+      {% if section.name == "Conference Papers"%}
+        <div id="{{section.id}}" class="container tab-pane active"><br>
+          {% for publications in site.data.conferencePapers %}
+          <div class="media mt-2">
+            <div class="media-body">
+              <h4 class="mt-0">{{ publications.name }}</h4>
+              <h6 class="mt-0">{{ publications.conference }}</h6>
+              {{ publications.description }}
+              <br>
+              <br>
+              <a class="btn btn-primary" href="{{ publications.link }}" download>
+                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                Download PDF
+              </a>
+            </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif%}
+      {% else %}
+        {% if section.name == "Theses & Research Reports"%}
+        <div id="{{section.id}}" class="container tab-pane"><br>
+          {% for item in site.data.thesesAndReports %}
+            {% if item.type == "thesis"%}
+              {% if item.first %}
+                <h2 class="mt-0">List of Theses</h2>
+              {% endif %}
+                <div class="media mt-2">
+                  <div class="media-body">
+                    <h4 style=" margin-top: 0; margin-bottom: 0;">{{ item.name }}</h4>
+                    <h6>{{ item.category }}</h6>
+                    {{ item.description }}
+                    <br>
+                    <br>
+                    <a class="btn btn-primary" href="{{ item.link }}" download>
+                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                      Download PDF
+                    </a>
+                  </div>
+                </div>
+            {% else if item.type == "research" %}
+              {% if item.first %}
+              <h2 class="mt-0">Research reports</h2>
+              {% endif %}
+                <div class="media mt-2">
+                  <div class="media-body">
+                    <h4 style=" margin-top: 0; margin-bottom: 0;">{{ item.name }}</h4>
+                    <h6>{{ item.category }}</h6>
+                    {{ item.description }}
+                    <br>
+                    <br>
+                    <a class="btn btn-primary" href="{{ item.link }}" download>
+                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                      Download PDF
+                    </a>
+                  </div>
+                </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% else%}
+          <div id="{{section.id}}" class="container tab-pane"><br>
+            <h3>{{section.name}}</h3>
+            <p>{{section.description}}</p>
+          </div>
+        {%endif%}
+      {%endif%} 
+    {% endfor %}
+  </div>
+</div>
 
 <!--
-
+  <div class="tab-content">
+    {% for section in site.data.sections %}
+      {% if section.first %}
+        {% if section.name == "Publications"%}
+        {% for publications in site.data.publications %}
+        <div class="media mt-2">
+          <div class="media-body">
+            <h5 class="mt-0">{{ publications.name }}</h5>
+            {{ publications.description }}
+            {% if publications.tech %}
+            <h6><mark><u>Technologies</u></mark></h6>
+            {% for tech in publications.tech %}
+            <span class="badge badge-secondary mr-1" style="background-color:{{ theme.publications-color }};">{{ tech }}</span>
+            {% endfor %}
+            {% endif %}
+            <br>
+            <br>
+            <a class="btn btn-primary" href="{{ publications.link }}" download>
+              <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+              Download PDF
+            </a>
+          </div>
+          </div>
+        {% endfor %}
+        {% else %}
+        <div id="{{section.id}}" class="container tab-pane"><br>
+          <h3>{{section.name}}</h3>
+          <p>{{section.description}}</p>
+        </div>
+        {% endif%}
+      {% else %}
+      <div id="{{section.id}}" class="container tab-pane"><br>
+        <h3>{{section.name}}</h3>
+        <p>{{section.description}}</p>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>-->
+<!--
   <ul class="nav nav-tabs">
       {% for section in site.data.sections %}
         {% if section.first %}

@@ -1,0 +1,39 @@
+- name: Network Sensing In WLAN 
+  type: thesis
+  category: Master Thesis
+  description: >
+    In industrial automation, there is strong interest in using wireless technologies to run production environments, and in particular to build networked control systems. To operate such networks effectively, sufficient control over the communication system is needed, regarding, e.g., bandwidth usage, frame latency, and frame loss. In this paper, we present an approach for traffic shaping that applies a variant of the token bucket algorithm, and an approach for traffic monitoring in order to determine network overload. In particular, we introduce and apply a metric called unusable wasted bandwidth ratio, which is derived from the number of unusable wasted tokens to detect network overload locally. We have implemented both approaches on a commercial platform with WLAN adapters, and have conducted real experiments to assess their performance.
+  date: true
+  link: https://vs.cs.uni-kl.de/publications/2017/Ma17/
+  first: true
+
+
+- name: Analysis of time synchronization of OpenSky sensor nodes 
+  type: research
+  category: Guided Research
+  description: >
+    The goal of this project is to synchronize the Open-Sky sensor network with nanosecond precision. For this, we checked the messages sent by the aircraft to two receivers and checked the offset in their reception time. To check the correctness of our system, we compare the calculated measurements to the ground-truth value, i.e., the difference in the timestamps between two receivers should be equal to the difference in the message propagation delay between the two receivers to the aircraft.
+  date: true
+  link: /assets/docs/reports/Time_Sync_in_OpenSky/report.pdf
+  first: true
+  
+- name: Automatic Topology Discovery in WiFi(IEEE 802.11) network
+  type: research
+  category: Guided Research
+  description: >
+    The main goal of this guided research was to develop a protocol to detect the topology of the network with nodes connected via IEEE 802.11. We came up with a protocol, which terminates with consistent topology information among nodes. One of the main tasks was the termination of the distributed protocol, which was solved by introducing a master node to compare the hash values of the topology matrix of each node. As a part of guided research, the protocol was implemented and tested.
+  date: true
+  link: https://vs.cs.uni-kl.de/en/publications/2016/Ma16/ 
+  first: false 
+
+- name: Mesh Networks Based on IEEE 802.11
+  type: research
+  category: Research Report
+  description: >
+    A study about mesh networks based on IEEE 802.11: in this work, we discuss mesh formation, routing techniques, frame structure, and internetworking. We also studied mesh projects such as One Laptop Per Child (OLPC) and Seamless Mesh (SMesh).
+  date: true
+  link: /assets/docs/reports/Mesh_Networks_Based_on_IEEE 802.11/main.pdf
+  first: false    
+  
+
+
