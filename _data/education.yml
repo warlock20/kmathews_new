@@ -1,6 +1,23 @@
-- School: Princeton
-  Degree: 
-  Program: School of Public and International Affairs
-  Start Date: 
-  End Date: 
-  Icon: /assets/img/icons/2x/princeton-crop.png      # Make this icon small, think 30px/30px
+- school: Technische Universität Kaiserslautern
+  degree: Phd
+  program: Doctor of Philosophy
+  startDate: Jan 2017
+  endDate: 
+  description: Phd in Computer Science. Focusing on Non-deterministic wireless communication.
+  icon:     # Make this icon small, think 30px/30px
+
+- school: Technische Universität Kaiserslautern
+  degree: M.Sc
+  program: Master of Computer Science
+  startDate: Oct 2014
+  endDate: Jan 2017
+  description: M.Sc Computer Science, specialized in Communication Networks
+  icon:     # Make this icon small, think 30px/30px
+  
+- school: Cochin University of Science and Technology
+  degree: B.Tech
+  program: Bachelors of Technology in Computer Science
+  startDate: May 2009
+  endDate: April 2013
+  description: B.Tech Computer Science
+  icon:     # Make this icon small, think 30px/30px

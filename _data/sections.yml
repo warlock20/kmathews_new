@@ -8,6 +8,13 @@
   description: Thesise
   first: false
 
+- name: Education
+  id: education
+  description: 
+  content: 
+  url: projects.html
+  first: false
+
 - name: Projects
   id: projects
   description: 
