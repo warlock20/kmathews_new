@@ -62,6 +62,6 @@ owner:
   
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "custom"
-  google		 :
-  tracking_id            : UA-83871443-2
+  provider               : # false (default), "google", "google-universal", "custom"
+  google		 		 :
+  tracking_id            : 
