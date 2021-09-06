@@ -12,14 +12,12 @@
   id: education
   description: 
   content: 
-  url: projects.html
   first: false
 
 - name: Projects
   id: projects
   description: 
   content: 
-  url: projects.html
   first: false
   
 #- name: Coursework

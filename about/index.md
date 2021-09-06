@@ -95,7 +95,7 @@ I am Kiran Mathews, a hardcore Gooner and PhD student supervised by Prof Reinhar
                       </a>
                     </div>
                   </div>
-              {% else if item.type == "research" %}
+              {% elsif item.type == "research" %}
                 {% if item.first %}
                 <h2 class="mt-0">Research reports</h2>
                 {% endif %}
@@ -115,7 +115,7 @@ I am Kiran Mathews, a hardcore Gooner and PhD student supervised by Prof Reinhar
               {% endif %}
             {% endfor %}
             </div>
-        {% else if section.name == "Education"%}
+        {% elsif section.name == "Education"%}
           <div id="{{section.id}}" class="container tab-pane"><br>
             <div class="list-group">
               {% for item in site.data.education %}
