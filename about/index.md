@@ -9,9 +9,9 @@ credit:
 creditlink:
 ---
 
-
 {% if page.image.feature %}<header class="masthead">
-	{% if site.logo != null %}
+{% if site.logo != null %}
+
   <div class="wrap">
    <a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
  </div>
@@ -31,7 +31,7 @@ creditlink:
 
 I am Kiran Mathews, a computer scientist and PhD student supervised by Prof Reinhard Gotzhein at Technische Universität Kaiserslautern, Germany. I have completed my master's in Computer Science from the [Technical University of Kaiserslautern](https://www.uni-kl.de/), Germany. My research focuses on the areas of Distributed protocols, Wireless communications, Ad-hoc networks, and Network Security. Further, I am working as Research Assistant in [Networked Systems](http://vs.cs.uni-kl.de/) in TU KL.
 
- <br> <br> <br>
+<br> <br> <br>
 
 <!--https://www.w3schools.com/bootstrap4/bootstrap_navs.asp
     https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_nav_pills_toggleable&stacked=h-->
@@ -128,14 +128,31 @@ I am Kiran Mathews, a computer scientist and PhD student supervised by Prof Rein
                   <p class="mb-1">{{item.school}}</p>
                   <small>{{item.description}}</small>
                 </a>
+                <br>
               {% endfor %}
             </div>
           </div>
-        {% else%}
-            <div id="{{section.id}}" class="container tab-pane"><br>
-              <h3>{{section.name}}</h3>
-              <p>{{section.description}}</p>
-            </div>
+        {% elsif section.name == "Projects"%}
+          <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+                <p><i>{{section.description}}</i></p>
+                  {% for projects in site.data.projects %}
+                  <div class="media mt-2">
+                    <a href="{{ projects.link }}"></a>
+                    <div class="media-body">
+                      <h5 class="mt-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h5>
+                      {{ projects.description }}
+                      {% if projects.tech %}
+                        <br><br>
+                        <h6><mark><u>Technologies</u></mark></h6>
+                        {% for tech in projects.tech %}
+                        <span class="badge badge-secondary mr-1" style="background-color:{{ theme.projects-color }};">{{ tech }}</span>
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+                  </div>
+                  <br> <br> <br>
+                  {% endfor %}
+            </div>        
         {%endif%}
       {%endif%} 
     {% endfor %}

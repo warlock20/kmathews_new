@@ -1,47 +1,39 @@
-- name: Project 1
+- name: Topology Explorer for WLAN
   id: project1
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-  date: true
-  link: https://example.com
-  image:  http://placehold.it/100x100
+    This research focuses to develop a protocol that detects the communication topology of the network consisting of nodes connected via IEEE 802.11. The proposed protocol terminates with consistent topology information among nodes. The termination of the distributed protocol is initiated by the predetermined master node by comparing the hash values of the topology matrix at each node. As a part of guided research, the protocol was implemented and tested.  date: true
+  link: https://vs.cs.uni-kl.de/en/publications/2016/Ma16/
   tech: 
-    - python
+    - C++
+    - C    
 
 
-- name: Project 2
+- name: WiPS
   id: project2
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
+    WiPS is an extensible framework, defining interfaces and a code structure, which support the implementation and integration of higher level protocols. 
+    Each application using WiPS can select an - for their use case - appropriate subset of protocols integrated into WiPS. 
+    Based on this selection, WiPS builds a tailored protocol stack only consisting of these protocols, that can be easily used by the application.
   date: true
-  link: https://example.com
-  image: http://placehold.it/100x100
+  link: https://vs.cs.uni-kl.de/
   tech: 
-    - c++
+    - C++
+    - Python
+    - Protobuf
+    - libPCAP
 
-- name: Project 3
+
+- name: Time synchronisation in OpenSky network
   id: project3
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
+    This research evaluates the synchronization error in the Open-Sky network. For evaluation, location messages broadcasted by the aircraft received by at least two receivers (of the networks) are used. The calculated measurements are compared to the ground truth value to check the correctness of the system. I.e., the difference in the timestamps between two receivers should be equal to the difference in the message propagation delay between the two receivers to the aircraft.   
   date: true
-  link: https://example.com
-  image:  http://placehold.it/100x100
+  link: https://www.researchgate.net/publication/351904247_Analysis_of_time_synchronization_of_OpenSky_sensor_nodes
   tech: 
-    - Java
-    - Maven
-    - Jenkins
+    - R
 
-- name: Project 4
-  id: project4
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 0
-  date: true
-  link: https://example.com
-  image: http://placehold.it/100x100
-  tech: 
-    - Sonarcube
-    - Java
+
+
+
+
+
