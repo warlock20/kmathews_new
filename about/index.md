@@ -29,7 +29,8 @@ creditlink:
 
 ## About Me:
 
-I am Kiran Mathews, a hardcore Gooner and PhD student supervised by Prof Reinhard Gotzhein at Technische Universität Kaiserslautern, Germany. I have completed my masters in Computer Science from the [Technical University of Kaiserslautern](https://www.uni-kl.de/), Germany. My research areas are in Distributed protocols, Wireless communications, Ad-hoc networks and Network Security. I am also working as Research Assistant in [Networked Systems](http://vs.cs.uni-kl.de/) in TU KL.
+I am Kiran Mathews, a computer scientist and PhD student supervised by Prof Reinhard Gotzhein at Technische Universität Kaiserslautern, Germany. I have completed my master's in Computer Science from the [Technical University of Kaiserslautern](https://www.uni-kl.de/), Germany. My research focuses on the areas of Distributed protocols, Wireless communications, Ad-hoc networks, and Network Security. Further, I am working as Research Assistant in [Networked Systems](http://vs.cs.uni-kl.de/) in TU KL.
+
  <br> <br> <br>
 
 <!--https://www.w3schools.com/bootstrap4/bootstrap_navs.asp
