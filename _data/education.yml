@@ -1,9 +1,9 @@
 - school: Technische Universität Kaiserslautern
-  degree: Phd
-  program: Doctor of Philosophy
+  degree: PhD (Dr.-Ing)
+  program: Doctor of Engineering 
   startDate: Jan 2017
-  endDate: 
-  description: Phd in Computer Science. Focusing on Non-deterministic wireless communication.
+  endDate: Sept 2022
+  description: PhD in Computer Science. Dissertation title "Protocols and Algorithms for reliability-constrained Quality-of-Service Routing in IEEE 802.11 (WiFi) Networks in Contention Mode"
   icon:     # Make this icon small, think 30px/30px
 
 - school: Technische Universität Kaiserslautern

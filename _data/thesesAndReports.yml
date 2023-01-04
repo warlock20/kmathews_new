@@ -1,3 +1,11 @@
+- name: Protocols and Algorithms for reliability-constrained Quality-of-Service Routing in IEEE 802.11 (WiFi) Networks in Contention Mode
+  type: Dissertation
+  category: Doctoral Thesis
+  description: >
+    Several applications have emerged and benefited from the recent advancements in wireless communication technologies. In the case of industrial automation, the wireless networks substituted wired networks to control and monitor the production systems and the factory environment. In such use cases, a common requirement is communication reliability. Technologies based on IEEE 802.15.4, such as WirelessHart and ZigBee developed for industrial applications, offer deterministic guarantees using reservation-based medium access. However, it is becoming more challenging for these technologies to guarantee their sufficiently predictable behavior, as the number of consumer electronics equipped with wireless communication technologies operating in the 2.4 GHz ISM band shared by IEEE 802.15.4 is increasing day by day. Meanwhile, developments in WiFi technology opened the opportunity to use WiFi for industrial applications. Compared to the technologies based on IEEE 802.15.4, WiFi offers significantly higher transmission rates, and the off-the-shelf commodity WiFi hardwares are available at a low cost. However, when using a contention-based technology such as WiFi for industrial applications, additional measures are required to guarantee the specified statistical reliability. This thesis lays the foundations for developing a multi-hop wireless control network using off-the-shelf IEEE 802.11 (WiFi) hardware operating in contention mode that can satisfy the specified reliability requirements of the applications. In a multi-hop wireless network, the communication reliability between the nodes depends on the routes determined by the routing protocol and managing these routes. We introduce a novel Quality-of-Service (QoS) routing protocol for contention-based wireless technologies such as WiFi that prioritizes reliability as the QoS requirement for route selection. The proposed routing protocol relies on different aspects of the network to determine and manage the routes. For instance, it requires algorithms and protocols to monitor and measure link quality, available bandwidth, or medium overload. Further, the determined routes require certain statistical link properties for the successful operation of the routes. We develop and evaluate different protocols, algorithms, and metrics to monitor and measure different aspects of the network in this thesis.  date: true
+  link: https://kluedo.ub.uni-kl.de/frontdoor/index/index/start/0/rows/10/sortfield/score/sortorder/desc/searchtype/simple/query/Kiran+Mathews/docId/6952
+  first: true
+
 - name: Network Sensing In WLAN 
   type: thesis
   category: Master Thesis
@@ -5,7 +13,7 @@
     In industrial automation, there is strong interest in using wireless technologies to run production environments, and in particular to build networked control systems. To operate such networks effectively, sufficient control over the communication system is needed, regarding, e.g., bandwidth usage, frame latency, and frame loss. In this paper, we present an approach for traffic shaping that applies a variant of the token bucket algorithm, and an approach for traffic monitoring in order to determine network overload. In particular, we introduce and apply a metric called unusable wasted bandwidth ratio, which is derived from the number of unusable wasted tokens to detect network overload locally. We have implemented both approaches on a commercial platform with WLAN adapters, and have conducted real experiments to assess their performance.
   date: true
   link: https://vs.cs.uni-kl.de/publications/2017/Ma17/
-  first: true
+  first: false
 
 
 - name: Analysis of time synchronization of OpenSky sensor nodes 
@@ -15,7 +23,7 @@
     The goal of this project is to synchronize the Open-Sky sensor network with nanosecond precision. For this, we checked the messages sent by the aircraft to two receivers and checked the offset in their reception time. To check the correctness of our system, we compare the calculated measurements to the ground-truth value, i.e., the difference in the timestamps between two receivers should be equal to the difference in the message propagation delay between the two receivers to the aircraft.
   date: true
   link: /assets/docs/reports/Time_Sync_in_OpenSky/report.pdf
-  first: true
+  first: false
   
 - name: Automatic Topology Discovery in WiFi(IEEE 802.11) network
   type: research
