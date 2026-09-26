@@ -1,7 +1,8 @@
 - name: Topology Explorer for WLAN
   id: project1
   description: >
-    This research focuses to develop a protocol that detects the communication topology of the network consisting of nodes connected via IEEE 802.11. The proposed protocol terminates with consistent topology information among nodes. The termination of the distributed protocol is initiated by the predetermined master node by comparing the hash values of the topology matrix at each node. As a part of guided research, the protocol was implemented and tested.  date: true
+    This research focuses to develop a protocol that detects the communication topology of the network consisting of nodes connected via IEEE 802.11. The proposed protocol terminates with consistent topology information among nodes. The termination of the distributed protocol is initiated by the predetermined master node by comparing the hash values of the topology matrix at each node. As a part of guided research, the protocol was implemented and tested.
+  date: true
   link: https://vs.cs.uni-kl.de/en/publications/2016/Ma16/
   tech: 
     - C++

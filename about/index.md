@@ -1,8 +1,8 @@
 ---
 layout: page-about
 title:
-excerpt: "So Simple is a responsive Jekyll theme for your words and images."
-modified: 2014-08-08T19:44:38.564948-04:00
+excerpt: "About Kiran Mathews — publications, theses, projects and education."
+modified: 2026-09-26
 image:
 feature:
 credit:
@@ -29,7 +29,7 @@ creditlink:
 
 ## About Me:
 
-I am  Dr.-Ing. Kiran Mathews, a postdoctoral research scientist at Fraunhofer IESE, Kaiserslautern, Germany. I completed my PhD dissertation under the supervision of Prof. Dr Reinhard Gotzhein at Technische Universität Kaiserslautern (now [Rheinland-Pfälzische Technische Universität Kaiserslautern](https://rptu.de/)), Germany. I have also completed my master's in Computer Science from the [Technical University of Kaiserslautern](https://rptu.de/), Germany. My current research focuses on Developing Software for safety-critical applications, Industrial Automation, Distributed protocols, Wireless communications, Ad-hoc networks, and Network Security. 
+I am Dr.-Ing. Kiran Mathews, a Senior Research Engineer at Bosch Corporate Research in Renningen, Germany, working where networking, systems software, and functional safety meet. My current work covers fault injection for automated software safety analysis, vehicle diagnostics, eBPF-based performance engineering, and in-vehicle networking. Before Bosch, I was a postdoctoral researcher at Fraunhofer IESE and co-founded Qurience GmbH (now part of Causality BioModels). I received my PhD (Dr.-Ing.) and my master's in Computer Science from the Technical University of Kaiserslautern (now [RPTU Kaiserslautern-Landau](https://rptu.de/)), where my dissertation, supervised by Prof. Dr. Reinhard Gotzhein, focused on reliability-constrained Quality-of-Service routing in IEEE 802.11 (WiFi) networks.
 
 <br> <br> <br>
 
@@ -66,9 +66,9 @@ I am  Dr.-Ing. Kiran Mathews, a postdoctoral research scientist at Fraunhofer IE
                 {{ publications.description }}
                 <br>
                 <br>
-                <a class="btn btn-primary" href="{{ publications.link }}" download>
-                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                  Download PDF
+                <a class="btn btn-primary" href="{{ publications.link }}">
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                  View on IEEE Xplore
                 </a>
               </div>
               </div>
@@ -90,10 +90,17 @@ I am  Dr.-Ing. Kiran Mathews, a postdoctoral research scientist at Fraunhofer IE
                       {{ item.description }}
                       <br>
                       <br>
+                      {% if item.link contains '.pdf' %}
                       <a class="btn btn-primary" href="{{ item.link }}" download>
                         <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                         Download PDF
                       </a>
+                      {% else %}
+                      <a class="btn btn-primary" href="{{ item.link }}">
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                        View
+                      </a>
+                      {% endif %}
                     </div>
                   </div>
               {% elsif item.type == "research" %}
@@ -107,10 +114,17 @@ I am  Dr.-Ing. Kiran Mathews, a postdoctoral research scientist at Fraunhofer IE
                       {{ item.description }}
                       <br>
                       <br>
+                      {% if item.link contains '.pdf' %}
                       <a class="btn btn-primary" href="{{ item.link }}" download>
                         <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                         Download PDF
                       </a>
+                      {% else %}
+                      <a class="btn btn-primary" href="{{ item.link }}">
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                        View
+                      </a>
+                      {% endif %}
                     </div>
                   </div>
               {% endif %}
