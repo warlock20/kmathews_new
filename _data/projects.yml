@@ -12,15 +12,17 @@
 - name: WiPS
   id: project2
   description: >
-    WiPS is an extensible framework, defining interfaces and a code structure, which support the implementation and integration of higher level protocols. 
-    Each application using WiPS can select an - for their use case - appropriate subset of protocols integrated into WiPS. 
-    Based on this selection, WiPS builds a tailored protocol stack only consisting of these protocols, that can be easily used by the application.
+    WiPS (WiFi integrated Protocol Stack) is an extensible libpcap-based framework, written in modern C++ with template metaprogramming,
+    that defines interfaces and a code structure for implementing and integrating higher-layer protocols.
+    Each application selects the subset of protocols it needs, and WiPS builds a tailored protocol stack from them.
+    WiPS is integrated into the ns-3 network simulator for large-scale protocol evaluation.
   date: true
   link: https://vs.cs.uni-kl.de/
   tech: 
     - C++
     - Python
     - Protobuf
+    - ns-3
     - libPCAP
 
 

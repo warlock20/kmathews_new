@@ -1,0 +1,59 @@
+- role: Senior Research Engineer
+  org: Robert Bosch GmbH, Corporate Research
+  location: Renningen, Germany
+  startDate: Jan 2026
+  endDate: Present
+  highlights:
+    - Technical lead and core developer of a scalable fault injection platform that automates Software Safety Analysis for safety-critical automotive ECUs.
+    - Intelligent vehicle diagnostics with Bosch business units, centred on field data collection across heterogeneous vehicle platforms.
+    - Kernel-level performance engineering for embedded targets using eBPF.
+    - In-vehicle network topologies for next-generation E/E architectures (10BASE-T1S, IEEE 1722 AVTP).
+
+- role: Research Engineer
+  org: Robert Bosch GmbH, Corporate Research
+  location: Renningen, Germany
+  startDate: Jul 2023
+  endDate: Dec 2025
+  highlights:
+    - Vehicle–edge–cloud computing and automotive communication.
+    - Predictable workload offloading between vehicle ECUs and the cloud, including Vision Language Models for automotive perception.
+    - Container-based dynamic function migration between vehicle, edge, and cloud at runtime.
+    - Latency and performance monitoring tooling for critical automotive communication protocols.
+    - Co-author of several invention reports and patent applications (pending).
+
+- role: Postdoctoral Researcher, Safety Engineering
+  org: Fraunhofer IESE
+  location: Kaiserslautern, Germany
+  startDate: Nov 2022
+  endDate: May 2023
+  highlights:
+    - Digital twins with Eclipse BaSyx (Asset Administration Shell) for Industry 4.0 projects.
+    - Safety requirements for communication systems in automotive industry projects.
+
+- role: Co-founder
+  org: Qurience GmbH (now part of Causality BioModels)
+  location: Kaiserslautern, Germany
+  startDate: Nov 2021
+  endDate: Oct 2022
+  highlights:
+    - One of four co-founders of a biomedical knowledge curation startup.
+    - Designed and built the platform architecture for structured extraction and management of causal relationships from scientific literature.
+
+- role: Research Associate, Networked Systems Group
+  org: Technische Universität Kaiserslautern
+  location: Kaiserslautern, Germany
+  startDate: Mar 2017
+  endDate: Sep 2022
+  highlights:
+    - Protocols and algorithms for Wireless Controlled Networked Systems (WCNS).
+    - Developed WiPS, an extensible C++ WiFi protocol stack integrated into the ns-3 network simulator.
+    - Organised the lecture "Networked Systems" and supervised Master's and Bachelor's theses.
+
+- role: Student Research Assistant, Networked Systems Group
+  org: Technische Universität Kaiserslautern
+  location: Kaiserslautern, Germany
+  startDate: Nov 2014
+  endDate: Mar 2017
+  highlights:
+    - Communication and time synchronisation protocols for IEEE 802.15.4 (Zigbee) networks.
+    - Built and maintained a WLAN testbed for wireless control network research.

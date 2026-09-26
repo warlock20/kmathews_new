@@ -11,13 +11,13 @@
   program: Master of Computer Science
   startDate: Oct 2014
   endDate: Jan 2017
-  description: M.Sc Computer Science, specialized in Communication Networks
+  description: "Specialization: Communication Systems. Minor: Electrical Engineering."
   icon:     # Make this icon small, think 30px/30px
   
-- school: Cochin University of Science and Technology
+- school: Cochin University of Science and Technology, Kerala, India
   degree: B.Tech
-  program: Bachelors of Technology in Computer Science
+  program: Bachelor of Technology in Computer Science and Engineering
   startDate: May 2009
   endDate: April 2013
-  description: B.Tech Computer Science
+  description: B.Tech. in Computer Science and Engineering
   icon:     # Make this icon small, think 30px/30px

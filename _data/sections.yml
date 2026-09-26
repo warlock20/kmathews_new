@@ -1,21 +1,19 @@
-- name: Conference Papers
-  id: conferencePapers
-  description: List of Conference Papers
+- name: Experience
+  id: experience
   first: true
 
-- name: Theses & Research Reports 
-  id: thesesAndReports
-  description: Theses and research reports
+- name: Publications
+  id: conferencePapers
   first: false
 
-- name: Education
-  id: education
-  description: 
-  content: 
+- name: Theses & Research Reports
+  id: thesesAndReports
   first: false
 
 - name: Projects
   id: projects
-  description: 
-  content: 
+  first: false
+
+- name: Education
+  id: education
   first: false
