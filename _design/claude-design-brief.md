@@ -1,5 +1,7 @@
 Design a personal website for **Dr.-Ing. Kiran Mathews**: a writing-first personal site with a compact professional record. It replaces an outdated 2016-era Jekyll site at k-mathews.com.
 
+**This is a new design, not a sync of the existing site.** Don't import or copy the layout of the current site or its GitHub repo (warlock20/kmathews_new). Don't reproduce the full-bleed photo home page, the black nav bar, the pill buttons or Font Awesome. Carrying over the monochrome, typographic character is fine if it serves this brief; propose your own type and colour.
+
 ## Who he is
 
 Senior Research Engineer at Bosch Corporate Research (Stuttgart area, Germany). Works where networking, systems software and functional safety meet. Over a decade designing, implementing and evaluating communication protocols. Current work: fault injection for automated software safety analysis, vehicle diagnostics, eBPF performance work, in-vehicle networking (10BASE-T1S, IEEE 1722), and vehicle–edge–cloud computing. PhD (Dr.-Ing., TU Kaiserslautern, 2022) on reliability-constrained QoS routing in WiFi networks. Earlier: postdoc at Fraunhofer IESE, co-founder of a biomedical knowledge-curation startup (Qurience GmbH, now part of Causality BioModels).

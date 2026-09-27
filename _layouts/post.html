@@ -1,78 +1,97 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-{% include head.html %}
-</head>
+---
+layout: base
+---
+{%- assign updated = page.updated | default: page.modified -%}
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign mins = words | divided_by: 200 -%}
+{%- if mins < 1 -%}{%- assign mins = 1 -%}{%- endif -%}
+{%- assign dek = page.summary | default: page.excerpt | strip_html | normalize_whitespace -%}
+{%- comment -%} Contents list, built from the h2 ids kramdown generates. Front matter toc: false turns it off. {%- endcomment -%}
+{%- assign toc_parts = content | split: '<h2 id="' -%}
+{%- assign toc_count = toc_parts.size | minus: 1 -%}
+{%- assign has_toc = false -%}
+{%- if toc_count >= 2 and page.toc != false -%}{%- assign has_toc = true -%}{%- endif -%}
+{%- capture toc_items -%}
+{%- for part in toc_parts offset: 1 -%}
+{%- assign hid = part | split: '"' | first -%}
+{%- assign htext = part | split: '</h2>' | first | remove_first: hid | remove_first: '">' | strip_html | strip -%}
+<li><a href="#{{ hid }}"><span class="n">{{ forloop.index }}</span><span>{{ htext }}</span></a></li>
+{%- endfor -%}
+{%- endcapture -%}
+{%- capture tag_links -%}
+{%- for tag in page.tags -%}<a class="tag" href="{{ '/writing/' | relative_url }}?tag={{ tag | slugify }}">{{ tag }}</a>{%- endfor -%}
+{%- endcapture -%}
+<article class="article" aria-labelledby="article-title">
+<div class="wrap">
+<div class="row">
 
-<body id="post">
+<aside class="rail article-rail only-wide" aria-label="Article details">
+<div class="article-sticky">
+<dl>
+<div><dt>Published</dt><dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %b %Y" }}</time></dd></div>
+{%- if updated %}
+<div><dt>Updated</dt><dd><time datetime="{{ updated | date: '%Y-%m-%d' }}">{{ updated | date: "%-d %b %Y" }}</time></dd></div>
+{%- endif %}
+<div><dt>Reading</dt><dd>{{ mins }} min</dd></div>
+{%- if page.tags.size > 0 %}
+<div><dt>Tags</dt><dd class="tags">{{ tag_links }}</dd></div>
+{%- endif %}
+</dl>
+{%- if has_toc %}
+<nav class="toc-rail" aria-label="Contents">
+<div class="toc-label">Contents</div>
+<ol>{{ toc_items }}</ol>
+<a class="to-top" href="#top">↑ Back to top</a>
+</nav>
+{%- endif %}
+</div>
+</aside>
 
-{% include navigation.html %}
+<div>
+<header class="article-head" id="top">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ '/writing/' | relative_url }}">Writing</a> <span aria-hidden="true">/</span>{% if page.tags.first %} <a href="{{ '/writing/' | relative_url }}?tag={{ page.tags.first | slugify }}">{{ page.tags.first }}</a> <span aria-hidden="true">/</span>{% endif %}</nav>
+<h1 class="article-title" id="article-title">{{ page.title }}</h1>
+{%- if dek != "" %}
+<p class="dek">{{ dek }}</p>
+{%- endif %}
+<div class="only-narrow">
+<p class="article-meta-narrow"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %b %Y" }}</time>{% if updated %} · updated <time datetime="{{ updated | date: '%Y-%m-%d' }}">{{ updated | date: "%-d %b %Y" }}</time>{% endif %} · {{ mins }} min</p>
+{%- if page.tags.size > 0 %}
+<div class="tags">{{ tag_links }}</div>
+{%- endif %}
+{%- if has_toc %}
+<details class="toc-details" open>
+<summary>Contents · {{ toc_count }} sections</summary>
+<ol>{{ toc_items }}</ol>
+</details>
+{%- endif %}
+</div>
+</header>
 
-<div id="main" role="main">
-  <article class="hentry">
-    {% if page.image.feature %}
-      <img src="{{ site.url }}/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" {% if site.logo == null %}style="margin-top:0;"{% endif %}>
-        {% if page.image.credit %}
-          <p class="image-credit">Image credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a>
-          </p>
-        {% endif %}
-      {% endif %}
-    <div class="entry-wrapper">
-      <header class="entry-header">
-        <ul class="entry-tags">
-          {% for tag in page.tags %}<li><a href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}">{{ tag }}</a></li>{% endfor %}
-        </ul>
-        {% if page.link %}
-          <h1 class="entry-title"><a href="{{ page.link }}">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %} <span class="link-arrow">&rarr;</span></a></h1>
-        {% else %}
-          <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
-        {% endif %}
-      </header>
-      <footer class="entry-meta">
-        {% if page.author %}
-          {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
-        {% endif %}
-        <!--{% if author.avatar contains 'http' %}
-          <img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"/>
-        {% elsif author.avatar %}
-          <img src="{{ site.url }}/images/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"/>
-        {% endif %}
-        <span class="author vcard">By <span class="fn">{{ author.name }}</span></span>-->
-        <span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}"><i class="fa fa-calendar-o"></i> {{ page.date | date: "%B %d, %Y" }}</time></span>
-        {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}"><i class="fa fa-pencil"></i> {{ page.modified | date: "%B %d, %Y" }}</time></span>{% endif %}
-        {% if site.owner.disqus-shortname and page.comments or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
-        {% if page.share %}{% include social-share.html %}{% endif %}
-        {% if page.ads == true %}{% include ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
-      </footer>
-      <div class="entry-content">
-        {{ content }}
-        {% if site.owner.disqus-shortname and page.comments or site.comments %}
-          <div id="disqus_thread"></div><!-- /#disqus_thread -->
-          {% include disqus-comments.html %}
-        {% endif %}
-      </div><!-- /.entry-content -->
-    </div><!-- /.entry-wrapper -->
-    <nav class="pagination" role="navigation">
-      {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous</a>
-      {% endif %}
-      {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next</a>
-      {% endif %}
-    </nav><!-- /.pagination -->
-  </article>
-</div><!-- /#main -->
+<div class="prose">
+{{ content }}
+</div>
 
-<div class="footer-wrapper">
-  <footer role="contentinfo" class="entry-wrapper">
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrapper -->
+<footer class="article-foot">
+<div class="notes">
+{%- for change in page.changelog %}
+<div><strong>Changelog</strong> — {{ change }}</div>
+{%- endfor %}
+<div>Found a mistake or have a question? <a href="mailto:{{ site.author.email }}?subject={{ page.title | uri_escape }}">Email me</a>.</div>
+</div>
+{%- if page.previous or page.next %}
+<nav class="pager" aria-label="More articles">
+{%- if page.previous %}
+<a class="prev" href="{{ page.previous.url | relative_url }}" rel="prev"><span class="dir">← Previous</span><span class="t">{{ page.previous.title }}</span></a>
+{%- endif %}
+{%- if page.next %}
+<a class="next" href="{{ page.next.url | relative_url }}" rel="next"><span class="dir">Next →</span><span class="t">{{ page.next.title }}</span></a>
+{%- endif %}
+</nav>
+{%- endif %}
+</footer>
+</div>
 
-{% include scripts.html %}
-
-</body>
-</html>
+</div>
+</div>
+</article>

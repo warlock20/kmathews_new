@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<style>
+rect { fill: #F6F4EF; stroke: #1C1B18; }
+text { fill: #1C1B18; }
+@media (prefers-color-scheme: dark) { rect { fill: #141412; stroke: #E9E5DB; } text { fill: #E9E5DB; } }
+</style>
+<rect x="3" y="3" width="58" height="58" rx="5" stroke-width="4"/>
+<text x="32" y="42" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="26" font-weight="600" letter-spacing="1">KM</text>
+</svg>

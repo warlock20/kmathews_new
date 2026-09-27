@@ -3,6 +3,7 @@
   location: Renningen, Germany
   startDate: Jan 2026
   endDate: Present
+  summary: Technical lead of a fault injection platform for automated software safety analysis; vehicle diagnostics, eBPF performance engineering and in-vehicle networking.
   highlights:
     - Technical lead and core developer of a scalable fault injection platform that automates Software Safety Analysis for safety-critical automotive ECUs.
     - Intelligent vehicle diagnostics with Bosch business units, centred on field data collection across heterogeneous vehicle platforms.
@@ -14,6 +15,7 @@
   location: Renningen, Germany
   startDate: Jul 2023
   endDate: Dec 2025
+  summary: Vehicle–edge–cloud computing and automotive communication, from workload offloading to latency monitoring.
   highlights:
     - Vehicle–edge–cloud computing and automotive communication.
     - Predictable workload offloading between vehicle ECUs and the cloud, including Vision Language Models for automotive perception.
@@ -26,6 +28,7 @@
   location: Kaiserslautern, Germany
   startDate: Nov 2022
   endDate: May 2023
+  summary: Digital twins for Industry 4.0 projects, and safety requirements for automotive communication systems.
   highlights:
     - Digital twins with Eclipse BaSyx (Asset Administration Shell) for Industry 4.0 projects.
     - Safety requirements for communication systems in automotive industry projects.
@@ -35,6 +38,7 @@
   location: Kaiserslautern, Germany
   startDate: Nov 2021
   endDate: Oct 2022
+  summary: One of four co-founders of a biomedical knowledge-curation startup; I designed and built the platform architecture.
   highlights:
     - One of four co-founders of a biomedical knowledge curation startup.
     - Designed and built the platform architecture for structured extraction and management of causal relationships from scientific literature.
@@ -44,6 +48,7 @@
   location: Kaiserslautern, Germany
   startDate: Mar 2017
   endDate: Sep 2022
+  summary: Protocols and algorithms for wireless networked control systems, and WiPS, a C++ WiFi protocol stack integrated into ns-3.
   highlights:
     - Protocols and algorithms for Wireless Controlled Networked Systems (WCNS).
     - Developed WiPS, an extensible C++ WiFi protocol stack integrated into the ns-3 network simulator.
@@ -54,6 +59,7 @@
   location: Kaiserslautern, Germany
   startDate: Nov 2014
   endDate: Mar 2017
+  summary: Communication and time synchronisation protocols for IEEE 802.15.4 networks, and a WLAN testbed.
   highlights:
     - Communication and time synchronisation protocols for IEEE 802.15.4 (Zigbee) networks.
     - Built and maintained a WLAN testbed for wireless control network research.

@@ -4,6 +4,7 @@
     This research focuses to develop a protocol that detects the communication topology of the network consisting of nodes connected via IEEE 802.11. The proposed protocol terminates with consistent topology information among nodes. The termination of the distributed protocol is initiated by the predetermined master node by comparing the hash values of the topology matrix at each node. As a part of guided research, the protocol was implemented and tested.
   date: true
   link: https://vs.cs.uni-kl.de/en/publications/2016/Ma16/
+  link_label: Report
   tech: 
     - C++
     - C    
@@ -18,6 +19,7 @@
     WiPS is integrated into the ns-3 network simulator for large-scale protocol evaluation.
   date: true
   link: https://vs.cs.uni-kl.de/
+  link_label: Networked Systems Group
   tech: 
     - C++
     - Python
@@ -32,6 +34,7 @@
     This research evaluates the synchronization error in the Open-Sky network. For evaluation, location messages broadcasted by the aircraft received by at least two receivers (of the networks) are used. The calculated measurements are compared to the ground truth value to check the correctness of the system. I.e., the difference in the timestamps between two receivers should be equal to the difference in the message propagation delay between the two receivers to the aircraft.   
   date: true
   link: https://www.researchgate.net/publication/351904247_Analysis_of_time_synchronization_of_OpenSky_sensor_nodes
+  link_label: ResearchGate
   tech: 
     - R
 

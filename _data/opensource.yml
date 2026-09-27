@@ -1,0 +1,13 @@
+# Open-source work and side projects, shown on the Research page.
+- name: Open1722
+  role: Contributor
+  description: COVESA's open-source implementation of IEEE 1722 (AVTP), the audio/video and control transport for in-vehicle networks. My contributions include eBPF-based measurement support.
+  tech: [C, eBPF, IEEE 1722]
+  link: https://github.com/COVESA/Open1722
+  link_label: github.com/COVESA/Open1722
+
+- name: Start with A
+  role: Side project
+  description: An open-source investment research platform, and my most recent fun project.
+  link: https://startwitha.xyz/
+  link_label: startwitha.xyz

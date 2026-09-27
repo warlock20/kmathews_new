@@ -1,151 +1,84 @@
 ---
-layout: page-about
-title:
-excerpt: "About Kiran Mathews — experience, publications, theses, projects and education."
-modified: 2026-09-26
-image:
-feature:
-credit:
-creditlink:
+title: About
+nav: about
+summary: "About Kiran Mathews: senior research engineer at Bosch Corporate Research, working on networking, systems software and functional safety."
 ---
+<div class="page about">
+<div class="wrap">
 
-{% if page.image.feature %}<header class="masthead">
-{% if site.logo != null %}
+<section class="row" aria-labelledby="about-h">
+<div class="rail">
+<div class="name">{{ site.author.full_name }}</div>
+<div>{{ site.author.role }}</div>
+<div>{{ site.author.org }}</div>
+<div>{{ site.author.location }}</div>
+</div>
+<div class="bio">
+<h1 id="about-h" class="page-title">About</h1>
+<p>I’m a senior research engineer at Bosch Corporate Research. I work where networking, systems software and functional safety meet, and for more than a decade I have designed, implemented and evaluated communication protocols: first for industrial WiFi, now for in-vehicle networks and the path from vehicle to edge to cloud.</p>
+<p>Day to day that means fault injection for automated software safety analysis, vehicle diagnostics, eBPF performance work, and in-vehicle networking with 10BASE-T1S and IEEE 1722.</p>
+<p>I did my doctorate at TU Kaiserslautern on reliability-constrained QoS routing in WiFi networks, was a postdoc at Fraunhofer IESE, and co-founded Qurience, a small biomedical knowledge-curation startup that is now part of Causality BioModels.</p>
+<p>Outside my day job I contribute to open-source projects, among them <a href="https://github.com/COVESA/Open1722">Open1722</a>, COVESA’s implementation of IEEE 1722, and I build side projects such as <a href="https://startwitha.xyz/">Start with A</a>, an open-source investment research platform.</p>
+<p>This site is my notebook. I’m writing again after a long break, mostly about the work above, and sometimes about moving between academia, a startup and industrial research. Write-ups about companies go on my <a href="https://warlock20.substack.com/">Substack</a>.</p>
+<p class="off"><strong>Off the clock</strong> — hiking, and Arsenal, patiently.</p>
+</div>
+</section>
 
-  <div class="wrap">
-   <a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
- </div>
- {% endif %}
-</header><!-- /.masthead -->
-{% else %}<header class="masthead">
-	<div class="wrap">
-    {% if site.logo != null %}
-    <a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
-    {% endif %}
-    <h1 class="site-title animated fadeIn"><a href="{{ site.url }}/">{{ site.title }}</a></h1>
-    <h2 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
-  </div>
-</header><!-- /.masthead -->{% endif %}
+<section class="section" aria-labelledby="exp-h">
+<div class="row section-head"><h2 id="exp-h" class="label">Experience</h2><div></div></div>
+<ol class="timeline">
+{%- for job in site.data.experience %}
+{%- assign start = job.startDate | split: " " | last -%}
+{%- if job.endDate == "Present" -%}{%- assign finish = "now" -%}{%- else -%}{%- assign finish = job.endDate | split: " " | last -%}{%- endif %}
+<li class="row">
+<div class="rail years">{{ start }} — {{ finish }}</div>
+<div class="stop">
+<span class="dot" aria-hidden="true"></span>
+<h3 class="stop-title">{{ job.role }}</h3>
+<div class="stop-org">{{ job.org }}</div>
+<p class="stop-desc">{{ job.summary }}</p>
+</div>
+</li>
+{%- endfor %}
+</ol>
+</section>
 
-## About Me:
+<section class="section" aria-labelledby="edu-h">
+<div class="row section-head"><h2 id="edu-h" class="label">Education</h2><div></div></div>
+<ol class="plain-list">
+{%- for e in site.data.education %}
+<li class="row">
+<div class="rail">{{ e.year }}</div>
+<div>
+<div class="pl-title">{{ e.title }}</div>
+<div class="pl-sub">{{ e.school_short }}</div>
+</div>
+</li>
+{%- endfor %}
+</ol>
+</section>
 
-I am Dr.-Ing. Kiran Mathews, a Senior Research Engineer at Bosch Corporate Research in Renningen, Germany, working where networking, systems software, and functional safety meet. My current work covers fault injection for automated software safety analysis, vehicle diagnostics, eBPF-based performance engineering, and in-vehicle networking. Before Bosch, I was a postdoctoral researcher at Fraunhofer IESE and co-founded Qurience GmbH (now part of Causality BioModels). I received my PhD (Dr.-Ing.) and my master's in Computer Science from the Technical University of Kaiserslautern (now [RPTU Kaiserslautern-Landau](https://rptu.de/)), where my dissertation, supervised by Prof. Dr. Reinhard Gotzhein, focused on reliability-constrained Quality-of-Service routing in IEEE 802.11 (WiFi) networks.
+<section class="section" aria-labelledby="else-h">
+<div class="row section-head"><h2 id="else-h" class="label">Elsewhere</h2><div></div></div>
+<div class="row">
+<div></div>
+<ul class="link-list">
+<li><a href="mailto:{{ site.author.email }}"><span>Email</span><span class="detail">{{ site.author.email }}</span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}"><span>LinkedIn</span><span class="detail">linkedin.com/in/{{ site.author.linkedin }}</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="https://github.com/{{ site.author.github }}"><span>GitHub</span><span class="detail">github.com/{{ site.author.github }}</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+{%- if site.author.substack %}
+<li><a href="{{ site.author.substack }}"><span>Substack</span><span class="detail">Write-ups about companies</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+{%- endif %}
+{%- if site.author.scholar %}
+<li><a href="{{ site.author.scholar }}"><span>Google Scholar</span><span class="detail">Publications and citations</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+{%- endif %}
+<li><a href="{{ '/feed.xml' | relative_url }}"><span>RSS</span><span class="detail">k-mathews.com/feed.xml</span><span class="arrow" aria-hidden="true">→</span></a></li>
+{%- if site.author.cv %}
+<li><a href="{{ site.author.cv | relative_url }}"><span>CV</span><span class="detail">PDF</span><span class="arrow" aria-hidden="true">↓</span></a></li>
+{%- endif %}
+</ul>
+</div>
+</section>
 
-<br> <br> <br>
-
-<!--https://www.w3schools.com/bootstrap4/bootstrap_navs.asp
-    https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_nav_pills_toggleable&stacked=h-->
-<div class="container shadow-lg p-3 mb-5 bg-white rounded" id="box-shadow">
-  <br>
-  <!-- Nav pills -->
-  <ul class="nav nav-pills nav-fill" role="tablist">
-    {% for section in site.data.sections %}
-    <li class="nav-item">
-      <a class="nav-link{% if section.first %} active{% endif %}" data-toggle="pill" href="#{{ section.id }}">{{ section.name }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    {% for section in site.data.sections %}
-    <div id="{{ section.id }}" class="container tab-pane{% if section.first %} active{% endif %}" role="tabpanel"><br>
-
-      {% if section.id == "experience" %}
-        {% for job in site.data.experience %}
-        <div class="media mt-2">
-          <div class="media-body">
-            <div class="d-flex w-100 justify-content-between">
-              <h4 class="mt-0 mb-0">{{ job.role }}</h4>
-              <small>{{ job.startDate }} – {{ job.endDate }}</small>
-            </div>
-            <h6>{{ job.org }}, {{ job.location }}</h6>
-            <ul>
-              {% for item in job.highlights %}<li>{{ item }}</li>{% endfor %}
-            </ul>
-          </div>
-        </div>
-        {% endfor %}
-
-      {% elsif section.id == "conferencePapers" %}
-        {% for publications in site.data.conferencePapers %}
-        <div class="media mt-2">
-          <div class="media-body">
-            <h4 class="mt-0">{{ publications.name }}</h4>
-            <p class="mb-1">{{ publications.authors | replace: "K. Mathews", "<strong>K. Mathews</strong>" }}</p>
-            <h6 class="mt-0">{{ publications.conference }}</h6>
-            {{ publications.description }}
-            <br>
-            <br>
-            <a class="btn btn-primary" href="{{ publications.link }}">
-              <i class="fa fa-external-link" aria-hidden="true"></i>
-              View on IEEE Xplore
-            </a>
-          </div>
-        </div>
-        {% endfor %}
-
-      {% elsif section.id == "thesesAndReports" %}
-        {% for item in site.data.thesesAndReports %}
-          {% if item.first and item.type == "thesis" %}<h2 class="mt-0">Theses</h2>{% endif %}
-          {% if item.first and item.type == "research" %}<h2 class="mt-0">Research reports</h2>{% endif %}
-          <div class="media mt-2">
-            <div class="media-body">
-              <h4 style="margin-top: 0; margin-bottom: 0;">{{ item.name }}</h4>
-              <h6>{{ item.category }}</h6>
-              {{ item.description }}
-              <br>
-              <br>
-              {% if item.link contains '.pdf' %}
-              <a class="btn btn-primary" href="{{ item.link }}" download>
-                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                Download PDF
-              </a>
-              {% else %}
-              <a class="btn btn-primary" href="{{ item.link }}">
-                <i class="fa fa-external-link" aria-hidden="true"></i>
-                View
-              </a>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-
-      {% elsif section.id == "projects" %}
-        {% for projects in site.data.projects %}
-        <div class="media mt-2">
-          <div class="media-body">
-            <h5 class="mt-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h5>
-            {{ projects.description }}
-            {% if projects.tech %}
-              <br><br>
-              <h6><mark><u>Technologies</u></mark></h6>
-              {% for tech in projects.tech %}
-              <span class="badge badge-secondary mr-1">{{ tech }}</span>
-              {% endfor %}
-            {% endif %}
-          </div>
-        </div>
-        <br>
-        {% endfor %}
-
-      {% elsif section.id == "education" %}
-        <div class="list-group">
-          {% for item in site.data.education %}
-          <div class="list-group-item flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-              <h4 class="mb-1">{{ item.program }}</h4>
-              <small>{{ item.startDate }} – {{ item.endDate }}</small>
-            </div>
-            <p class="mb-1">{{ item.school }}</p>
-            <small>{{ item.description }}</small>
-          </div>
-          <br>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-    </div>
-    {% endfor %}
-  </div>
+</div>
 </div>

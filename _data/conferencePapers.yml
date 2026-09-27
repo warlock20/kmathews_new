@@ -2,6 +2,9 @@
   id: 9417117
   authors: K. Mathews, R. Gotzhein
   conference: 2021 IEEE Wireless Communications and Networking Conference (WCNC)
+  year: 2021
+  short: WCNC
+  venue: IEEE Wireless Communications and Networking Conference (WCNC)
   description: >
     Reliability of end-to-end communication is crucial for applications such as wireless networked control systems. To discover routes that satisfy specified reliability requirements, adaptive, conservative, and stable link reliability estimates are required. Traditional metrics do not support these objectives well enough. In this paper, we propose OB-EWMA (Outlier Bounded Exponential Weighted Moving Average) as link metric for reliability-constrained routing in contention-based wireless networks. We have implemented OB-EWMA along with a topology explorer, evaluate its fidelity in a Wi-Fi testbed, and compare it to other link metrics.
   date: true
@@ -11,6 +14,9 @@
   id: 8958764
   authors: C. Kramer, K. Mathews, R. Gotzhein
   conference: 2019 IEEE 38th International Performance Computing and Communications Conference (IPCCC)
+  year: 2019
+  short: IPCCC
+  venue: IEEE 38th International Performance Computing and Communications Conference (IPCCC)
   description: >
     Applications with Quality of Service (QoS) requirements such as networked control systems are not well supported by today's off-the-shelf wireless standards such as IEEE 802.11 (WiFi). Specifying a range of minimally required base QoS and preferred QoS combined with dynamic scaling in this range can help to support QoS while improving network utilization. However, scaling is typically happening in a greedy and therefore unfair way, with each node trying to maximize its throughput. In this paper, we present a cooperative algorithm for dynamical cooperative bandwidth scaling using a time token bucket approach. We show that our approach improves bandwidth utilization in a fair way. Furthermore, it dynamically reacts to topology changes, e.g. due to node mobility, as well as to traffic of uncooperative (external) nodes. Finally, it achieves stable bandwidth usage of participating nodes, even in networks with external traffic. We evaluate our approach in an IEEE 802.11 testbed.
   date: true
@@ -20,6 +26,9 @@
   id: 8990685
   authors: C. Kohlstruck, K. Mathews, R. Gotzhein
   conference: 2019 IEEE 44th Conference on Local Computer Networks (LCN)
+  year: 2019
+  short: LCN
+  venue: IEEE 44th Conference on Local Computer Networks (LCN)
   description: >
    In this paper, we propose a new approach for Quality-of-Service routing in wireless ad-hoc networks called rmin-routing, with the provision of statistical minimum route reliability as main route selection criterion. Discovery of r min routes is based on a network model with statistical link reliabilities, which are combined into path reliabilities. To achieve specified minimum route reliabilities, we improve the reliability of individual links by well-directed retransmissions, to be applied during the operation of routes. To select among a set of candidate routes, we define and apply route quality criteria concerning network load. We have applied rmin-routing in sample topologies, and compare it to other routing approaches.
   date: true
@@ -28,7 +37,10 @@
 - name: Token bucket based traffic shaping and monitoring for WLAN-based control systems
   id: 8292201
   authors: K. Mathews, C. Kramer, R. Gotzhein
-  conference: 2017 IEEE 28th Annual International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC) 
+  conference: 2017 IEEE 28th Annual International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC)
+  year: 2017
+  short: PIMRC
+  venue: IEEE 28th Annual International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC)
   description: >
     In industrial automation, there is strong interest in using wireless technologies to run production environments, and in particular to build networked control systems. To operate such networks effectively, sufficient control over the communication system is needed, regarding, e.g., bandwidth usage, frame latency, and frame loss. In this paper, we present an approach for traffic shaping that applies a variant of the token bucket algorithm, and an approach for traffic monitoring in order to determine network overload. In particular, we introduce and apply a metric called unusable wasted bandwidth ratio, which is derived from the number of unusable wasted tokens to detect network overload locally. We have implemented both approaches on a commercial platform with WLAN adapters, and have conducted real experiments to assess their performance.
   date: true

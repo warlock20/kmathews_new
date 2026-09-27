@@ -1,67 +1,57 @@
-#Site wide configuration
+# Site
 
-title:  Dr.-Ing. Kiran Mathews
-locale: en_US
-description: "Senior Research Engineer at Bosch. Networking protocols, systems software & functional safety. Hiker, Gooner #COYG"
-logo: site-logo.png
-search: true
+title: Kiran Mathews
+description: "Senior Research Engineer at Bosch Corporate Research, writing about networking protocols, Linux internals, fault injection and in-vehicle networks."
 url: https://k-mathews.com
+lang: en
+
+author:
+  name: Kiran Mathews
+  full_name: Dr.-Ing. Kiran Mathews
+  role: Senior Research Engineer
+  org: Bosch Corporate Research
+  location: Stuttgart area, Germany
+  location_short: Stuttgart area, DE
+  email: kiranmathews20@gmail.com
+  github: warlock20
+  linkedin: kiranmathews
+  substack: https://warlock20.substack.com/   # write-ups about companies
+  scholar:        # full Google Scholar profile URL; links are hidden while empty
+  cv:             # path or URL of a CV PDF, e.g. /assets/docs/cv.pdf; hidden while empty
+
+# One line under the home page intro
+now: "fault injection for automated safety analysis · 10BASE-T1S · IEEE 1722 · eBPF performance"
+
+# Impressum (§ 5 DDG). The Impressum section and its footer link appear only when address is filled in.
+impressum:
+  address:        # list of lines, e.g. ["Musterstraße 1", "70000 Stuttgart", "Germany"]
 
 
-# Jekyll configuration
+# Build
 
-permalink:   /:categories/:title/
-markdown:    kramdown
+permalink: /:categories/:title/
+markdown: kramdown
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed
 plugins:
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
 
 kramdown:
   input: GFM
   auto_ids: true
   footnote_nr: 1
+  footnote_backlink: "↑"
   entity_output: as_char
-  toc_levels: 1..2
-  enable_coderay: false
+  toc_levels: 2..3
 
-mathjax: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: base
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor", "compose.yaml"]
-
-
-# Site owner
-owner:
-  name: Kiran Mathews
-  avatar: bio-photo.jpg
-  email: kiranmathews20@gmail.com
-  disqus-shortname: kmathews
-  twitter: KiranMathewsAFC
-  facebook: kiran.mathews.33
-  github: warlock20
-  stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: kiranmathews
-  instagram: #username
-  flickr: #username
-  tumblr: #username
-  pinterest: #username
-  weibo: #userid
-  google:
-    plus: #username
-    analytics:
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  
-  
-# Analytics
-analytics:
-  provider               : # false (default), "google", "google-universal", "custom"
-  google		 		 :
-  tracking_id            : 
