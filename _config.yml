@@ -55,3 +55,11 @@ defaults:
     values:
       layout: post
 
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - compose.yaml
+  - vendor
+  - node_modules
