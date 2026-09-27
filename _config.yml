@@ -19,9 +19,6 @@ author:
   scholar:        # full Google Scholar profile URL; links are hidden while empty
   cv:             # path or URL of a CV PDF, e.g. /assets/docs/cv.pdf; hidden while empty
 
-# One line under the home page intro
-now: "fault injection for automated safety analysis · 10BASE-T1S · IEEE 1722 · eBPF performance"
-
 # Impressum (§ 5 DDG). The Impressum section and its footer link appear only when address is filled in.
 impressum:
   address:        # list of lines, e.g. ["Musterstraße 1", "70000 Stuttgart", "Germany"]
