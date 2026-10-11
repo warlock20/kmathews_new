@@ -1,0 +1,24 @@
+{%- assign nav = page.nav -%}
+{%- if page.collection == "posts" -%}{%- assign nav = "writing" -%}{%- endif -%}
+{%- capture toggle -%}
+<button type="button" class="theme-toggle" aria-label="Switch theme">
+<svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg>
+<svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"></path></svg>
+</button>
+{%- endcapture -%}
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.author.name }}, home">
+<span class="mark" aria-hidden="true">KM</span>
+<span class="brand-name">{{ site.author.name }}</span>
+</a>
+<span class="header-toggle">{{ toggle }}</span>
+<nav class="site-nav" aria-label="Main">
+<a href="{{ '/writing/' | relative_url }}"{% if nav == "writing" %} aria-current="page"{% endif %}>Writing</a>
+<a href="{{ '/research/' | relative_url }}"{% if nav == "research" %} aria-current="page"{% endif %}>Research</a>
+<a href="{{ '/about/' | relative_url }}"{% if nav == "about" %} aria-current="page"{% endif %}>About</a>
+<span class="nav-divider" aria-hidden="true"></span>
+{{ toggle }}
+</nav>
+</div>
+</header>

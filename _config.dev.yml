@@ -1,0 +1,4 @@
+# Local overrides, loaded after _config.yml by `docker compose up` and the dev container
+url: http://localhost:4000
+# The container runs as root; don't leave a root-owned .jekyll-cache/ in the repo
+disable_disk_cache: true

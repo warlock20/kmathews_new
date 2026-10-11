@@ -1,55 +1,38 @@
 ---
-layout: page
-title: Privacy Policy
-excerpt: 
-modified:
-image:
-feature:
-credit:
-creditlink:
+title: Privacy
+summary: "How k-mathews.com handles visitor data."
 ---
+<div class="page">
+<div class="wrap">
 
+{%- if site.impressum.address %}
+<section id="impressum" class="row" aria-labelledby="imp-h">
+<div class="rail">Angaben gemäß § 5 DDG</div>
+<div class="legal">
+<h1 id="imp-h" class="page-title">Impressum</h1>
+<address>{{ site.author.name }}<br>{{ site.impressum.address | join: "<br>" }}</address>
+<p>E-Mail: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+<p class="muted">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: {{ site.author.name }}, Anschrift wie oben. This is a personal site. Views are my own and not those of my employer.</p>
+</div>
+</section>
+{%- endif %}
 
-<h1>Privacy Policy for k-mathews</h1>
+<section id="privacy" class="row{% if site.impressum.address %} section{% endif %}" aria-labelledby="priv-h">
+<div class="rail">Datenschutz</div>
+<div class="legal">
+<h1 id="priv-h" class="page-title">Privacy</h1>
+<p class="lead">This site sets no cookies, runs no analytics or trackers, and shows no ads. Fonts, scripts and styles are served from this domain.</p>
+<dl class="facts">
+<div><dt>Hosting</dt><dd>The site is hosted on GitHub Pages and served through Cloudflare. To deliver the site and protect it from abuse, they process technical data such as your IP address, browser type and the pages you request. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a> and the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>. Legal basis: Art. 6(1)(f) GDPR.</dd></div>
+<div><dt>Analytics</dt><dd>None. If that changes, it will be cookieless, aggregate-only and listed here.</dd></div>
+<div><dt>Theme setting</dt><dd>If you switch between light and dark, your choice is stored in your browser’s local storage. It never leaves your device.</dd></div>
+<div><dt>Maths</dt><dd>Articles that contain equations load MathJax from cdn.jsdelivr.net, which receives your IP address. Other pages do not.</dd></div>
+<div><dt>Email</dt><dd>If you write to me, I use your message only to reply.</dd></div>
+<div><dt>Your rights</dt><dd>Access, rectification, erasure, restriction, objection, and complaint to a supervisory authority (Art. 15–21 and 77 GDPR).</dd></div>
+</dl>
+<p class="muted">Controller under the GDPR: {{ site.author.name }}, <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.</p>
+</div>
+</section>
 
-<p>At k-mathews, accessible from www.k-mathews.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by k-mathews and how we use it.</p>
-
-<p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
-
-<h2>Log Files</h2>
-
-<p>k-mathews follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicygenerator.org">Privacy Policy Generator</a>.</p>
-
-
-<h2>Google DoubleClick DART Cookie</h2>
-
-<p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
-
-
-<h2>Privacy Policies</h2>
-
-<P>You may consult this list to find the Privacy Policy for each of the advertising partners of k-mathews.</p>
-
-<p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on k-mathews, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
-
-<p>Note that k-mathews has no access to or control over these cookies that are used by third-party advertisers.</p>
-
-<h2>Third Party Privacy Policies</h2>
-
-<p>k-mathews's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. </p>
-
-<p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</p>
-
-<h2>Children's Information</h2>
-
-<p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
-
-<p>k-mathews does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
-
-<h2>Online Privacy Policy Only</h2>
-
-<p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in k-mathews. This policy is not applicable to any information collected offline or via channels other than this website.</p>
-
-<h2>Consent</h2>
-
-<p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>									
+</div>
+</div>

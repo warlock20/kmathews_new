@@ -1,5 +1,8 @@
 - school: Technische Universität Kaiserslautern (Rheinland-Pfälzische Technische Universität Kaiserslautern)
   degree: PhD (Dr.-Ing)
+  title: Dr.-Ing., Computer Science
+  school_short: TU Kaiserslautern (now RPTU), Germany
+  year: 2022
   program: Doctor of Engineering 
   startDate: Jan 2017
   endDate: Sept 2022
@@ -8,16 +11,22 @@
 
 - school: Technische Universität Kaiserslautern (Rheinland-Pfälzische Technische Universität Kaiserslautern)
   degree: M.Sc
+  title: M.Sc. Computer Science, Communication Systems
+  school_short: TU Kaiserslautern (now RPTU), Germany
+  year: 2017
   program: Master of Computer Science
   startDate: Oct 2014
   endDate: Jan 2017
-  description: M.Sc Computer Science, specialized in Communication Networks
+  description: "Specialization: Communication Systems. Minor: Electrical Engineering."
   icon:     # Make this icon small, think 30px/30px
   
-- school: Cochin University of Science and Technology
+- school: Cochin University of Science and Technology, Kerala, India
   degree: B.Tech
-  program: Bachelors of Technology in Computer Science
+  title: B.Tech. Computer Science and Engineering
+  school_short: Cochin University of Science and Technology (CUSAT), India
+  year: 2013
+  program: Bachelor of Technology in Computer Science and Engineering
   startDate: May 2009
   endDate: April 2013
-  description: B.Tech Computer Science
+  description: B.Tech. in Computer Science and Engineering
   icon:     # Make this icon small, think 30px/30px

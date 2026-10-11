@@ -1,0 +1,106 @@
+---
+title: Research
+nav: research
+summary: "Publications, dissertation and projects by Kiran Mathews, mostly on reliable communication over contention-based WiFi."
+---
+<div class="page research">
+<div class="wrap">
+
+<div class="row">
+<div class="rail">{% if site.author.scholar %}<a href="{{ site.author.scholar }}">Google Scholar ↗</a>{% endif %}</div>
+<div>
+<h1 class="page-title">Research</h1>
+<p class="lead">Publications and projects, mostly from my doctoral work on reliable communication over contention-based WiFi, plus the open-source work I do now. Newer work shows up in <a href="{{ '/writing/' | relative_url }}">Writing</a>.</p>
+</div>
+</div>
+
+{%- assign diss = site.data.thesesAndReports | where: "type", "Dissertation" | first %}
+{%- if diss %}
+<section class="section" aria-labelledby="diss-h">
+<div class="row section-head"><h2 id="diss-h" class="label">Dissertation</h2><div></div></div>
+<div class="row diss">
+<div class="rail">{{ diss.year }} · Dr.-Ing.</div>
+<div>
+<h3 class="pub-title"><a href="{{ diss.link }}">{{ diss.name }}</a></h3>
+<p class="pub-authors"><span class="me">Kiran Mathews</span>. Doctoral dissertation, TU Kaiserslautern. Supervised by Prof. Dr. Reinhard Gotzhein.</p>
+<div class="pub-links"><a href="{{ diss.link }}">{{ diss.link_label | default: "Full text" }} ↗</a></div>
+</div>
+</div>
+</section>
+{%- endif %}
+
+<section class="section" aria-labelledby="pub-h">
+<div class="row section-head"><h2 id="pub-h" class="label">Papers</h2><div></div></div>
+<ol class="plain-list">
+{%- assign papers = site.data.conferencePapers | sort: "year" | reverse %}
+{%- for p in papers %}
+<li class="row pub">
+<div class="rail"><span class="yr">{{ p.year }}</span> · {{ p.short }}</div>
+<div>
+<h3 class="pub-title"><a href="{{ p.link }}">{{ p.name }}</a></h3>
+<p class="pub-authors">{{ p.authors | replace: "K. Mathews", '<span class="me">K. Mathews</span>' }}</p>
+<p class="pub-venue">{{ p.venue }}, {{ p.year }}</p>
+<div class="pub-links"><a href="{{ p.link }}">IEEE Xplore ↗</a></div>
+</div>
+</li>
+{%- endfor %}
+</ol>
+</section>
+
+<section class="section" aria-labelledby="oss-h">
+<div class="row section-head"><h2 id="oss-h" class="label">Open source</h2><div></div></div>
+<div class="row">
+<div class="rail cards-rail">{% if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub ↗</a>{% endif %}</div>
+<div class="cards">
+{%- for pr in site.data.opensource %}
+<article class="card">
+<div class="card-role">{{ pr.role }}</div>
+<h3>{{ pr.name }}</h3>
+<p>{{ pr.description | strip }}</p>
+{%- if pr.tech %}
+<div class="tech">{% for x in pr.tech %}<span>{{ x }}</span>{% endfor %}</div>
+{%- endif %}
+<a href="{{ pr.link }}">{{ pr.link_label | default: "Details" }} ↗</a>
+</article>
+{%- endfor %}
+</div>
+</div>
+</section>
+
+<section class="section" aria-labelledby="proj-h">
+<div class="row section-head"><h2 id="proj-h" class="label">Research projects</h2><div></div></div>
+<div class="row">
+<div></div>
+<div class="cards">
+{%- for pr in site.data.projects %}
+<article class="card">
+<h3>{{ pr.name }}</h3>
+<p>{{ pr.description | strip }}</p>
+{%- if pr.tech %}
+<div class="tech">{% for x in pr.tech %}<span>{{ x }}</span>{% endfor %}</div>
+{%- endif %}
+{%- if pr.link %}
+<a href="{{ pr.link }}">{{ pr.link_label | default: "Details" }} ↗</a>
+{%- endif %}
+</article>
+{%- endfor %}
+</div>
+</div>
+</section>
+
+<section class="section" aria-labelledby="rep-h">
+<div class="row section-head"><h2 id="rep-h" class="label">Theses and reports</h2><div></div></div>
+<ul class="plain-list reports">
+{%- for r in site.data.thesesAndReports %}
+{%- if r.type != "Dissertation" %}
+<li class="row">
+<div class="rail">{{ r.year }}</div>
+<div class="title"><a href="{{ r.link | relative_url }}">{{ r.name | strip }}</a> <span class="muted">— {{ r.category }}</span></div>
+</li>
+{%- endif %}
+{%- endfor %}
+</ul>
+</section>
+
+</div>
+</div>

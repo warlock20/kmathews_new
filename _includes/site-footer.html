@@ -1,0 +1,30 @@
+<footer class="site-footer">
+<div class="wrap">
+<div class="inner">
+<div class="footer-brand"><span class="mark" aria-hidden="true">KM</span><span>k-mathews.com</span></div>
+<nav class="footer-links" aria-label="Elsewhere">
+<a href="mailto:{{ site.author.email }}">Email</a>
+<a href="https://github.com/{{ site.author.github }}">GitHub</a>
+<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+{%- if site.author.substack %}
+<a href="{{ site.author.substack }}">Substack</a>
+{%- endif %}
+{%- if site.author.scholar %}
+<a href="{{ site.author.scholar }}">Google Scholar</a>
+{%- endif %}
+<a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+{%- if site.author.cv %}
+<a href="{{ site.author.cv | relative_url }}">CV (PDF)</a>
+{%- endif %}
+</nav>
+<div class="footer-legal">
+<span>© {{ site.time | date: "%Y" }} {{ site.author.name }}</span>
+<span>No cookies, no trackers.</span>
+{%- if site.impressum.address %}
+<a href="{{ '/privacy/#impressum' | relative_url }}">Impressum</a>
+{%- endif %}
+<a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+</div>
+</div>
+</div>
+</footer>

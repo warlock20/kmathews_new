@@ -1,0 +1,14 @@
+{%- assign p = include.post -%}
+{%- assign summary = p.summary | default: p.excerpt | strip_html | normalize_whitespace -%}
+<article class="entry">
+<time datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: "%Y-%m-%d" }}</time>
+<div>
+<h3 class="entry-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+{%- if summary != "" %}
+<p class="entry-summary">{{ summary | truncate: 220 }}</p>
+{%- endif %}
+{%- if p.tags.size > 0 %}
+<div class="tags">{% for tag in p.tags %}<a class="tag" href="{{ '/writing/' | relative_url }}?tag={{ tag | slugify }}">{{ tag }}</a>{% endfor %}</div>
+{%- endif %}
+</div>
+</article>
