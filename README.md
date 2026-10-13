@@ -1,6 +1,6 @@
 # kmathews
 
-Personal Website
+Personal wWebsite
 
 ## Local preview
 
